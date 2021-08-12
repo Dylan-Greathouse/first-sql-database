@@ -3,20 +3,21 @@ module.exports = [
     name: "Demon's-Souls",
     system: "PlayStation3",
     played: true,
-
+    year_released: 2011,
   },
 
   {
     name: "Demon's-Souls-II",
     system: "PlayStation3",
     played: true,
-    
+    year_released: 2014,
   },
 
   {
     name: "Demon's-Souls-III",
     system: "PlayStation3",
     played: true,
+    year_released: 2016,
     
   },
 
@@ -24,6 +25,7 @@ module.exports = [
     name: "Bloodborne",
     system: "PlayStation4",
     played: false,
+    year_released: 2015,
     
   },
 
@@ -31,13 +33,13 @@ module.exports = [
     name: "Sekiro",
     system: "PlayStation 4",
     played: true,
-    
+    year_released: 2019,
   },
 
   {
     name: "Elden-Ring",
     system: "PlayStation5",
     played: false,
-    
+    year_released: 2022,
   }
 ];

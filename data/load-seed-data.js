@@ -35,12 +35,14 @@ async function run() {
                     INSERT INTO videogames (
                     name,
                     system,
-                    played)
-                    VALUES ($1, $2, $3);
+                    played,
+                    year_released)
+                    VALUES ($1, $2, $3, $4);
                 `,
         [videogame.name,
           videogame.system,
-          videogame.played
+          videogame.played,
+          videogame.year_released
         ]);
       })
     );

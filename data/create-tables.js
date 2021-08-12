@@ -27,7 +27,8 @@ async function run() {
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
                     system VARCHAR(512) NOT NULL,
-                    played BOOLEAN NOT NULL 
+                    played BOOLEAN NOT NULL,
+                    year_released INTEGER
             );
         `);
 

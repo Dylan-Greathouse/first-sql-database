@@ -36,7 +36,7 @@ describe('app routes', () => {
           name: "Demon's-Souls",
           system: "PlayStation3",
           played: true,
-      
+          year_released: 2011,
         },
       
         {
@@ -44,7 +44,7 @@ describe('app routes', () => {
           name: "Demon's-Souls-II",
           system: "PlayStation3",
           played: true,
-          
+          year_released: 2014,
         },
       
         {
@@ -52,6 +52,7 @@ describe('app routes', () => {
           name: "Demon's-Souls-III",
           system: "PlayStation3",
           played: true,
+          year_released: 2016,
           
         },
       
@@ -60,6 +61,7 @@ describe('app routes', () => {
           name: "Bloodborne",
           system: "PlayStation4",
           played: false,
+          year_released: 2015,
           
         },
       
@@ -68,7 +70,7 @@ describe('app routes', () => {
           name: "Sekiro",
           system: "PlayStation 4",
           played: true,
-          
+          year_released: 2019,
         },
       
         {
@@ -76,7 +78,7 @@ describe('app routes', () => {
           name: "Elden-Ring",
           system: "PlayStation5",
           played: false,
-          
+          year_released: 2022,
         }
       ];
 
@@ -95,7 +97,7 @@ describe('app routes', () => {
           name: "Demon's-Souls",
           system: "PlayStation3",
           played: true,
-      
+          year_released: 2011,
         }
       ];
 
