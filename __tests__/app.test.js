@@ -126,5 +126,22 @@ describe('app routes', () => {
       expect(videogamesData.body.name).toEqual(newVideogame.name);
       expect(videogamesData.body.id).toBeGreaterThan(0);
     });
+
+    test('PUT /videogames/:id updates videogames', async ()=>{
+      const updatedData = {
+        id: 1,
+        name: "Demon's-Souls",
+        system: "PlayStation4",
+        played: true,
+        year_released: 2018
+      };
+      const videogameData = await fakeRequest(app)
+        .put('/videogames/1')
+        .send(updatedData)
+        .expect(200)
+        .expect('Content-Type', /json/);
+      expect(videogameData.body.system).toEqual(updatedData.system);
+      expect(videogameData.body.year_released).toEqual(updatedData.year_released);
+    });
   });
 });
