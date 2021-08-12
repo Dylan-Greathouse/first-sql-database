@@ -10,6 +10,12 @@ async function run() {
     // initiate connecting to db
     await client.connect();
 
+
+    // id: 1,
+    // name: "Demon's-Souls",
+    // system: "PlayStation3",
+    // played: true,
+
     // run a query to create tables
     await client.query(`
                 CREATE TABLE users (
@@ -17,11 +23,11 @@ async function run() {
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
                 );           
-                CREATE TABLE animals (
+                CREATE TABLE videogames (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
-                    cool_factor INTEGER NOT NULL,
-                    owner_id INTEGER NOT NULL REFERENCES users(id)
+                    system VARCHAR(512) NOT NULL,
+                    played BOOLEAN NOT NULL 
             );
         `);
 
