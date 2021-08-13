@@ -108,5 +108,40 @@ describe('app routes', () => {
 
       expect(data.body).toEqual(expectation);
     });
+
+    test('POST /videogames creates a new videogame in data', async() => {
+      const newVideogame = {
+        name: "Ninja-Blade",
+        system: "Xbox360",
+        played: false,
+        year_released: 2009
+      };
+
+      const videogamesData = await fakeRequest(app)
+        .post('/videogames')
+        .send(newVideogame)
+        .expect(200)
+        .expect('Content-type', /json/);
+      // console.log(videogamesData);
+      expect(videogamesData.body.name).toEqual(newVideogame.name);
+      expect(videogamesData.body.id).toBeGreaterThan(0);
+    });
+
+    test('PUT /videogames/:id updates videogames', async ()=>{
+      const updatedData = {
+        id: 1,
+        name: "Demon's-Souls",
+        system: "PlayStation4",
+        played: true,
+        year_released: 2018
+      };
+      const videogameData = await fakeRequest(app)
+        .put('/videogames/1')
+        .send(updatedData)
+        .expect(200)
+        .expect('Content-Type', /json/);
+      expect(videogameData.body.system).toEqual(updatedData.system);
+      expect(videogameData.body.year_released).toEqual(updatedData.year_released);
+    });
   });
 });

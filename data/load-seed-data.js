@@ -9,6 +9,7 @@ run();
 // name: "Demon's-Souls",
 // system: "PlayStation3",
 // played: true,
+// year_released
 
 
 async function run() {
