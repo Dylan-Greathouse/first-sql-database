@@ -22,11 +22,17 @@ async function run() {
                     id SERIAL PRIMARY KEY,
                     email VARCHAR(256) NOT NULL,
                     hash VARCHAR(512) NOT NULL
-                );           
+                );
+                  
+                CREATE TABLE systems (
+                  id SERIAL PRIMARY KEY,
+                  console VARCHAR(512) NOT NULL
+                );
+                
                 CREATE TABLE videogames (
                     id SERIAL PRIMARY KEY NOT NULL,
                     name VARCHAR(512) NOT NULL,
-                    system VARCHAR(512) NOT NULL,
+                    system_id INTEGER NOT NULL REFERENCES systems(id),
                     played BOOLEAN NOT NULL,
                     year_released INTEGER
             );
