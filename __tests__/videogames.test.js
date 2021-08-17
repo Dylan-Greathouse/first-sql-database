@@ -6,7 +6,7 @@ const fakeRequest = require('supertest');
 const app = require('../lib/app');
 const client = require('../lib/client');
 
-describe('app routes', () => {
+describe('videogame routes', () => {
   describe('routes', () => {
     let token;
   
@@ -36,24 +36,23 @@ describe('app routes', () => {
           name: "Demon's-Souls",
           system: "PlayStation3",
           played: true,
-          year_released: 2011,
+          year_released: 2009,
         },
       
         {
           id: 2,
-          name: "Demon's-Souls-II",
+          name: "Dark-Souls",
           system: "PlayStation3",
           played: true,
-          year_released: 2014,
+          year_released: 2011,
         },
       
         {
           id: 3,
-          name: "Demon's-Souls-III",
+          name: "Dark-Souls-II",
           system: "PlayStation3",
           played: true,
-          year_released: 2016,
-          
+          year_released: 2014,
         },
       
         {
@@ -67,14 +66,23 @@ describe('app routes', () => {
       
         {
           id: 5,
+          name: "Dark-Souls-III",
+          system: "PlayStation3",
+          played: true,
+          year_released: 2016,
+          
+        },
+      
+        {
+          id: 6,
           name: "Sekiro",
-          system: "PlayStation 4",
+          system: "PlayStation4",
           played: true,
           year_released: 2019,
         },
       
         {
-          id: 6,
+          id: 7,
           name: "Elden-Ring",
           system: "PlayStation5",
           played: false,
@@ -91,15 +99,14 @@ describe('app routes', () => {
     });
     test('returns videogames end point 1', async() => {
 
-      const expectation = [
+      const expectation = 
         {
           id: 1,
           name: "Demon's-Souls",
           system: "PlayStation3",
           played: true,
-          year_released: 2011,
-        }
-      ];
+          year_released: 2009,
+        };
 
       const data = await fakeRequest(app)
         .get('/videogames/1')
@@ -111,10 +118,10 @@ describe('app routes', () => {
 
     test('POST /videogames creates a new videogame in data', async() => {
       const newVideogame = {
-        name: "Ninja-Blade",
-        system: "Xbox360",
+        name: "Armored-Core",
+        system_id: 1,
         played: false,
-        year_released: 2009
+        year_released: 2013
       };
 
       const videogamesData = await fakeRequest(app)
@@ -122,7 +129,6 @@ describe('app routes', () => {
         .send(newVideogame)
         .expect(200)
         .expect('Content-type', /json/);
-      // console.log(videogamesData);
       expect(videogamesData.body.name).toEqual(newVideogame.name);
       expect(videogamesData.body.id).toBeGreaterThan(0);
     });
@@ -131,7 +137,7 @@ describe('app routes', () => {
       const updatedData = {
         id: 1,
         name: "Demon's-Souls",
-        system: "PlayStation4",
+        system_id: 2,
         played: true,
         year_released: 2018
       };

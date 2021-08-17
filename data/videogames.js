@@ -1,44 +1,51 @@
 module.exports = [
   {
     name: "Demon's-Souls",
-    system: "PlayStation3",
+    system_id: 1,
+    played: true,
+    year_released: 2009,
+  },
+
+  {
+    name: "Dark-Souls",
+    system_id: 1,
     played: true,
     year_released: 2011,
   },
 
   {
-    name: "Demon's-Souls-II",
-    system: "PlayStation3",
+    name: "Dark-Souls-II",
+    system_id: 1,
     played: true,
     year_released: 2014,
   },
 
   {
-    name: "Demon's-Souls-III",
-    system: "PlayStation3",
-    played: true,
-    year_released: 2016,
-    
-  },
-
-  {
     name: "Bloodborne",
-    system: "PlayStation4",
+    system_id: 2,
     played: false,
     year_released: 2015,
     
   },
 
   {
+    name: "Dark-Souls-III",
+    system_id: 1,
+    played: true,
+    year_released: 2016,
+    
+  },
+
+  {
     name: "Sekiro",
-    system: "PlayStation 4",
+    system_id: 2,
     played: true,
     year_released: 2019,
   },
 
   {
     name: "Elden-Ring",
-    system: "PlayStation5",
+    system_id: 3,
     played: false,
     year_released: 2022,
   }
