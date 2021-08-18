@@ -4,7 +4,7 @@ module.exports = [
     system_id: 1,
     played: true,
     year_released: 2009,
-    image_url: '../assets/demons-souls-ps3.jpg',
+    image_url: './assets/demons-souls-ps3.jpg',
   },
 
   {
@@ -12,7 +12,7 @@ module.exports = [
     system_id: 1,
     played: true,
     year_released: 2011,
-    image_url: '../assets/dark-souls.jpg',
+    image_url: './assets/dark-souls.jpg',
   },
 
   {
@@ -20,7 +20,7 @@ module.exports = [
     system_id: 1,
     played: true,
     year_released: 2014,
-    image_url: '../assets/dark-soul2.jpg',
+    image_url: './assets/dark-soul2.jpg',
   },
 
   {
@@ -28,7 +28,7 @@ module.exports = [
     system_id: 2,
     played: false,
     year_released: 2015,
-    image_url: '../assets/bloodborne.jpg',
+    image_url: './assets/bloodborne.jpg',
   },
 
   {
@@ -36,7 +36,7 @@ module.exports = [
     system_id: 1,
     played: true,
     year_released: 2016,
-    image_url: '../assets/dark-souls3.jpg',
+    image_url: './assets/dark-souls3.jpg',
   },
 
   {
@@ -44,7 +44,7 @@ module.exports = [
     system_id: 2,
     played: true,
     year_released: 2019,
-    image_url: '../assets/sekiro.jpg',
+    image_url: './assets/sekiro.jpg',
   },
 
   {
@@ -52,6 +52,6 @@ module.exports = [
     system_id: 3,
     played: false,
     year_released: 2022,
-    image_url: '../assets/elden-ring.jpg',
+    image_url: './assets/elden-ring.jpg',
   }
 ];
