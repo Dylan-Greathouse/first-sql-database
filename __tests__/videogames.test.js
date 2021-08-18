@@ -33,60 +33,67 @@ describe('videogame routes', () => {
       const expectation = [
         {
           id: 1,
-          name: "Demon's-Souls",
-          system: "PlayStation3",
+          name: "Demon's Souls",
+          system: "PlayStation 3",
           played: true,
           year_released: 2009,
+          image_url: '../assets/demons-souls-ps3.jpg',
         },
       
         {
           id: 2,
-          name: "Dark-Souls",
-          system: "PlayStation3",
+          name: "Dark Souls",
+          system: "PlayStation 3",
           played: true,
           year_released: 2011,
+          image_url: '../assets/dark-souls.jpg',
         },
       
         {
           id: 3,
-          name: "Dark-Souls-II",
-          system: "PlayStation3",
+          name: "Dark Souls II",
+          system: "PlayStation 3",
           played: true,
           year_released: 2014,
+          image_url: '../assets/dark-soul2.jpg',
         },
       
         {
           id: 4,
           name: "Bloodborne",
-          system: "PlayStation4",
+          system: "PlayStation 4",
           played: false,
           year_released: 2015,
+          image_url: '../assets/bloodborne.jpg',
           
         },
       
         {
           id: 5,
-          name: "Dark-Souls-III",
-          system: "PlayStation3",
+          name: "Dark Souls III",
+          system: "PlayStation 3",
           played: true,
           year_released: 2016,
+          image_url: '../assets/dark-souls3.jpg',
           
         },
       
         {
           id: 6,
           name: "Sekiro",
-          system: "PlayStation4",
+          system: "PlayStation 4",
           played: true,
           year_released: 2019,
+          image_url: '../assets/sekiro.jpg',
         },
       
         {
           id: 7,
-          name: "Elden-Ring",
-          system: "PlayStation5",
+          name: "Elden Ring",
+          system: "PlayStation 5",
           played: false,
           year_released: 2022,
+          image_url: '../assets/elden-ring.jpg',
         }
       ];
 
@@ -102,10 +109,11 @@ describe('videogame routes', () => {
       const expectation = 
         {
           id: 1,
-          name: "Demon's-Souls",
-          system: "PlayStation3",
+          name: "Demon's Souls",
+          system: "PlayStation 3",
           played: true,
           year_released: 2009,
+          image_url: '../assets/demons-souls-ps3.jpg',
         };
 
       const data = await fakeRequest(app)
@@ -118,10 +126,11 @@ describe('videogame routes', () => {
 
     test('POST /videogames creates a new videogame in data', async() => {
       const newVideogame = {
-        name: "Armored-Core",
+        name: "Armored Core",
         system_id: 1,
         played: false,
-        year_released: 2013
+        year_released: 2013,
+        image_url: 'N/A'
       };
 
       const videogamesData = await fakeRequest(app)
@@ -136,10 +145,11 @@ describe('videogame routes', () => {
     test('PUT /videogames/:id updates videogames', async ()=>{
       const updatedData = {
         id: 1,
-        name: "Demon's-Souls",
+        name: "Demon's Souls",
         system_id: 2,
         played: true,
-        year_released: 2018
+        year_released: 2018,
+        image_url: '../assets/demon-souls-remake.jpg'
       };
       const videogameData = await fakeRequest(app)
         .put('/videogames/1')
