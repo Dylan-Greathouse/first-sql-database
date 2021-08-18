@@ -44,7 +44,7 @@ module.exports = [
     system_id: 2,
     played: true,
     year_released: 2019,
-    image_url: './assets/sekiro.jpg',
+    image_url: 'assets/sekiro.jpg',
   },
 
   {
@@ -52,6 +52,6 @@ module.exports = [
     system_id: 3,
     played: false,
     year_released: 2022,
-    image_url: './assets/elden-ring.jpg',
+    image_url: 'http://cdn.mos.cms.futurecdn.net/5Uy9G9jBLAYRsfGCheFHHC.jpg',
   }
 ];
