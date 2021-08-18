@@ -49,14 +49,16 @@ async function run() {
                     name,
                     system_id,
                     played,
-                    year_released)
-                    VALUES ($1, $2, $3, $4)
+                    year_released,
+                    image_url)
+                    VALUES ($1, $2, $3, $4, $5)
                     RETURNING *;
                 `,
         [videogame.name,
           videogame.system_id,
           videogame.played,
-          videogame.year_released
+          videogame.year_released,
+          videogame.image_url
         ]);
       })
     );
