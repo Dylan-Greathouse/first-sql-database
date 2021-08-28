@@ -34,7 +34,7 @@ async function run() {
                     name VARCHAR(512) NOT NULL,
                     system_id INTEGER NOT NULL REFERENCES systems(id),
                     played BOOLEAN NOT NULL,
-                    year_released INTEGER,
+                    year_released INTEGER NOT NULL,
                     image_url VARCHAR(512) NOT NULL
             );
         `);
