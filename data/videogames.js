@@ -4,7 +4,7 @@ module.exports = [
     system_id: 1,
     played: true,
     year_released: 2009,
-    image_url: '../Assets/download.jpg',
+    image_url: 'https://images.pushsquare.com/7c0bd4ec9821f/demons-souls-ps3-playstation-3.original.jpg',
   },
 
   {
